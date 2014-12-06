@@ -1,0 +1,10 @@
+# Idea files
+*.iml
+*.ipr
+*.iws
+.idea/*
+ 
+# generated files
+target/*
+
+my_notes.txt
