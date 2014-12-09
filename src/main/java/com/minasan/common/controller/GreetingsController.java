@@ -26,9 +26,20 @@ public class GreetingsController {
 		return model;
 	}
 
+    @RequestMapping(value = "/items_page", method = {RequestMethod.GET})
+    public ModelAndView fetchItemsPage(HttpServletRequest request, HttpServletResponse response) {
+        List<Item> items = itemsService.fetchItems();
+        Item firstItem = items.get(0);
+
+        ModelAndView model = new ModelAndView("greetings");
+        model.addObject("msg", "The first record text is \""+firstItem.getText()+"\"");
+
+        return model;
+    }
+
     @RequestMapping(value = "/items", method = {RequestMethod.GET})
     @ResponseBody
-    public List<Item> fetchUsers() {
+    public List<Item> fetchItems() {
         return itemsService.fetchItems();
     }
 }

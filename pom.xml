@@ -12,6 +12,7 @@
         <hibernate.version>3.6.9.Final</hibernate.version>
         <dbcp.version>1.4</dbcp.version>
         <data.framework.version>1.7.1.RELEASE</data.framework.version>
+        <security.framework.version>3.2.5.RELEASE</security.framework.version>
     </properties>
 
     <dependencies>
@@ -100,6 +101,25 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.9</version>
+        </dependency>
+
+        <!-- Spring Security -->
+        <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-core</artifactId>
+                <version>${security.framework.version}</version>
+        </dependency>
+
+        <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-web</artifactId>
+                <version>${security.framework.version}</version>
+        </dependency>
+
+        <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-config</artifactId>
+                <version>${security.framework.version}</version>
         </dependency>
 
     </dependencies>
